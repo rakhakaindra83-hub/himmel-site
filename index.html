@@ -157,5 +157,15 @@
 <script src="js/model.js" defer></script>
 <script src="js/view.js" defer></script>
 <script src="js/controller.js" defer></script>
+<script>
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+  if (e.key === 'F12' || (e.ctrlKey && 'uUsS'.includes(e.key)) || (e.ctrlKey && e.shiftKey && 'iIjJcC'.includes(e.key))) {
+    e.preventDefault();
+  }
+});
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('dragstart', e => e.preventDefault());
+</script>
 </body>
 </html>
